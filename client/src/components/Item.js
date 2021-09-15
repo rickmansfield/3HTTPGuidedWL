@@ -37,6 +37,8 @@ function Item(props) {
     //4. redirect to our item list page.
     axios.delete(`http://localhost:3333/items/${id}`)
       .then(res=> {
+        // console.log('Item.js ln:40 res.data', res.data);
+        // console.log('Item.js ln:41 props', props);
         props.setItems(res.data);
         props.history.push('/item-list');
       })
